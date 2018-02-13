@@ -10,6 +10,16 @@ html
         -var fullName = 'Serhat Yılmaz';
         |Adınız Soyadınız = #{fullName.toUpperCase()}
 
+        br
+
+        -var ifSayisi=10
+        if !ifSayisi
+            | Sayı yok
+        else if ifSayisi===12
+            | Sayı 12
+        else
+            | Sayı 12 ye eşit değil
+
         hr
         
         include footer.pug
