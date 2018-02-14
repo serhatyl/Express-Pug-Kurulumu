@@ -1,5 +1,9 @@
-block stylesheet
-    link(href="layout.css")
-block content
-block scripts
-    script(src="layout.js")
+html
+    head
+        block stylesheet
+            link(href="layout.css")
+    body
+        block content
+
+    block scripts
+        script(src="layout.js")
