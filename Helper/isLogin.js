@@ -1,5 +1,5 @@
 const isLogin = (req, res, next) => {
-    const isLogin = false;
+    const isLogin = true;
     if (isLogin)
         next();
     //next middleware'in bir sonraki aşamada bulunan işlemi yapmasını sağlar

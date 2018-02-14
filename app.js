@@ -25,8 +25,16 @@ app.use(express.static('public'));
 app.use(isLogin);
 app.use('/user', signIn);
 app.use('/kullanici', signUp);
-app.use('/profile', profile)
-app.use('/member', user)
+app.use('/profile', profile);
+app.use('/member', user);
+//Hata Yönetimi MDW
+app.use((err, req, res, next) => {
+    res.status(err.status);
+    res.render('error', {
+        message: err.message,
+        status: err.status
+    });
+});
 
 
 app.listen(3000, () => {
